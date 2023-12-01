@@ -40,13 +40,13 @@ function ReportManagementcom() {
   const handleClickDelete = () => {
     const report_id = selectedReport?.report_id;
     if (!report_id) {
-      Swal.fire("Please select a question to delete", "", "warning");
+      Swal.fire("Please select a report to delete", "", "warning");
       return;
     }
 
     Swal.fire({
-      title: "Delete Question",
-      text: "Are you sure you want to delete this question?",
+      title: "Delete Report",
+      text: "Are you sure you want to delete this report?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonText: "Delete",
@@ -65,11 +65,11 @@ function ReportManagementcom() {
               confirmButtonText: "OK",
             });
           } else {
-            Swal.fire("Error deleting question", "", "error");
+            Swal.fire("Error deleting report", "", "error");
           }
         } catch (error) {
-          console.error("Error deleting question:", error);
-          Swal.fire("Error deleting question", "", "error");
+          console.error("Error deleting report:", error);
+          Swal.fire("Error deleting report", "", "error");
         }
       }
     });
